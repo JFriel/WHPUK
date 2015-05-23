@@ -2,12 +2,11 @@
 	<head>
 		<title> 48 Hour Party Playlist</title>
     <p>Hi there!</p>
-    <img src="http://www.google.fr/url?source=imglanding&ct=img&q=https://play.spotify.edgekey.net/client/9a05078/images/logo.png&sa=X&ei=8DdgVbyeDMS2Uce7gegK&ved=0CAkQ8wc&usg=AFQjCNFIfhP8q2IGGPEGWpy6R8LjoISrdg" alt="Fuck, it didn't work" align="centre">
     <br>
     <br>
-    <form action="demo_form.asp">
-  	What Song Do you want on?: <input type="text" name="fname"><br>
-  	<input type="submit" value="Submit">
-</form> 
-    <a href="https://open.spotify.com/user/1145201912/playlist/6KWAhvz9PxGuqLs0Gmde8U">Want to see what's already been added?</a>
+    <form method='POST' action="handle_request.py">
+      What Song Do you want on?: <input type="text" name="fname"><br>
+      <input type="submit" value="Submit">
+    </form> 
+
 </html>
