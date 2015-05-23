@@ -3,17 +3,17 @@ import sys
 import spotipy.util as util
 import os
 
-def run():
-
+def run(se):
+	f = se
 	os.environ['SPOTIPY_CLIENT_ID'] = 'ac497bd019ae4c84b33cb54c615496a7'
 	os.environ['SPOTIPY_CLIENT_SECRET'] = '3353544aa8344e50927459f630ac8704'
 	os.environ['SPOTIPY_REDIRECT_URI'] = 'http://localhost:8888/callback'
 
-	def add():
-	    if len(sys.argv) > 1:
-	        username = "1145201912"
-	        playlist_id = "6KWAhvz9PxGuqLs0Gmde8U"
-	        track_ids = search() 
+	def add(serch):
+	    if len(serch) > 1:
+	        username = "1119587538"
+	        playlist_id = "47dWRITq7VKBROxfhwFTAk"
+	        track_ids = search(serch) 
 	    else:
 	        print "Blank Space isn't on Spotify anymore."
 	        sys.exit()
@@ -27,11 +27,12 @@ def run():
 	    else:
 	        print "Can't get token for", username
 	       
-	def search():
-	    tracks = ' '.join(sys.argv[1:])
+	def search(serch):
+	    tracks = ' '.join(serch[1:])
 	    tracks = spotipy.Spotify().search(q=tracks, limit=1)
 	    for i,t in enumerate(tracks['tracks']['items']):
 	        tracks = t['id']
 	    return tracks
 	        
-	add()
+	add(f)
+
