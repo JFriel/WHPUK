@@ -3,7 +3,6 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.see_songs),
-    url(r'^handle_request/$', views.handle_request),
+    url(r'^$/handle_request/', views.handle_request),
     (r'^search/$', views.search),
-    ]
+]
