@@ -14,7 +14,7 @@ def search(request):
     if 'q' in request.POST:
     	#print request.POST['q']
     	arg1 = request.POST['q']
-    	os.system('python /home/James/Desktop/WHPUK/hwpuk/addsong/add_songs.py %s' %(arg1))
+    	os.system('python /Users/Feroli/Github/WHParis/hwpuk/addsong/add_songs.py %s' %(arg1))
     	#subprocess.Popen('/home/James/Desktop/WHPUK/hwpuk/add_songs.py')
         message = 'You searched for: %r' % request.POST['q']
     else:
