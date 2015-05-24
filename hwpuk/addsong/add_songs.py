@@ -31,5 +31,5 @@ def search():
     for i,t in enumerate(tracks['tracks']['items']):
         tracks = t['id']
     return tracks
-       
-
+        
+add()
